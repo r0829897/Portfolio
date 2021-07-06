@@ -1,0 +1,289 @@
+/* UNIVERSAL */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: lightgrey;
+}
+
+section {
+    display: flex;
+}
+
+/* HEADER */
+header{
+    height: 100vh;
+    background-image: url("images/background-image.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.navigation {
+    display: flex;
+    flex-flow: row nowrap;
+    background: rgb(77, 60, 39);
+    justify-content: flex-end;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    opacity: 0.8;
+}
+
+nav a {
+    font-family: 'Encode Sans SC', sans-serif;
+    color: white;
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-size: large;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav a[href*="home"] {
+    background-color: white;
+    color: black;
+}
+
+h1 {
+    position: absolute;
+    color: white;
+    bottom: 20%;
+    left: 7%;
+    font-size: 50px;
+}
+
+/* ABOUT ME */
+#about {
+    height: 100vh;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#about div:first-child {
+    height: 60%;
+    width: 35%;
+    min-height: 400px;
+    min-width: 400px;
+    background-image: url("images/about-image.jpeg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#about div:first-child  img {
+    position: absolute;
+    right: -30px;
+    bottom: -20px;
+}
+
+#about > div:last-child {
+    margin-left: 100px;
+}
+
+#about > div:last-child h2 {
+    margin: 20px;
+}
+
+#about div:last-child p {
+    line-height: 1.5em;
+}
+
+/* PORTFOLIO */
+#portfolio {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+#portfolio h2 {
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    flex-basis: 50px;
+}
+
+#portfolio div {
+    display: flex;
+    align-items: stretch;
+}
+
+#portfolio img {
+    margin: 5px;
+}
+
+/* CONTACT */
+#contacts {
+    height: 20vh;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#contacts h2 {
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+}
+
+#contacts p {
+    line-height: 2em;
+}
+
+#contacts img {
+    opacity: 0.3;
+}
+
+/* FOOTER */
+footer {
+    height: 5vh;
+    background: rgb(79, 11, 11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* POP-UP WINDOW */
+.open-window {
+    display: block;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: rgb(79, 11, 11);
+    padding: 7px;
+    margin: auto;
+}
+
+.open-window:hover, .close-window:hover {
+    background: rgb(110, 16, 16);
+}
+
+.close-window {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background: rgb(79, 11, 11);
+    padding: 15px;
+    align-self: center;
+}
+
+.window {
+    padding: 35px;
+    background: white;
+    border: 3px solid rgb(79, 11, 11);
+    text-align: center;
+    position: fixed;
+    flex-flow: column nowrap;
+    top: 50%;
+    margin-top: -160px;
+    width: 800px;
+    height: 320px;
+    justify-content: space-between;
+    overflow: hidden;
+    visibility: hidden;
+    z-index: 2;
+}
+
+@keyframes pop-up-window {
+    from {
+        width: 0;
+        height: 0;
+    }
+
+    to {
+        width: 800px;
+        height: 320px;
+    }
+}
+
+/* RESIZING */
+.hamburger {
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .navigation > a {
+        display: none;
+    }
+
+    .hamburger {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    #open-button, #close-button {
+        width: 50px;
+        height: 50px;
+        float: right;
+    }
+
+    #open-button {
+        background-image: url(images/hamburger-menu.png);
+        background-size: contain;
+    }
+
+    #close-button {
+        visibility: hidden;
+        font-size: 45px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(77, 60, 39);
+        border: none;
+        position: relative;
+        right: -50px;
+    }
+
+    .hamburger nav {
+        clear: both;
+        visibility: hidden;
+        display: flex;
+        flex-flow: column nowrap;
+        background: rgb(77, 60, 39);
+    }
+}
+
+@keyframes open-navigation {
+    from {
+        width: 0;
+        height: 0;
+    }
+
+    to {
+        width: 113px;
+        height: 92px;
+    }
+}
+
+@keyframes close-navigation {
+    from {
+        width: 113px;
+        height: 92px;
+    }
+
+    to {
+        width: 0;
+        height: 0;
+    }
+}

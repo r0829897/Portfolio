@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Encode+Sans+SC:wght@100;300&family=Montserrat&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <header id="home">
+        <nav class="navigation">
+            <a href="#about">About me</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contacts">Contacts</a>
+            <a href="#home">Home</a>
+            <div class="hamburger">
+                <button id="open-button" onclick="openNav(this)"></button>
+                <button id="close-button" onclick="closeNav(this)">x</button>
+                <nav>
+                    <a href="#about">About me</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contacts">Contacts</a>
+                    <a href="#home">Home</a>
+                </nav>
+            </div>
+        </nav>
+        <h1>Ben Dhover,<br> Front-end developer</h1>
+    </header>
+    <section id="about">
+        <div>
+            <img src="images/person.jpg" alt="person">
+        </div>
+        <div>
+            <h2>About me</h2>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Nam imperdiet a ante id ultrices. Praesent a dui tellus.</p>
+                <p>Ut varius commodo nisl, in aliquam elit imperdiet a. Vivamus vel porta arcu.</p>
+                <p>Sed a nisl id erat dapibus tincidunt non sit amet magna.</p>
+                <p>Vivamus sollicitudin orci sit amet lorem laoreet, ac mattis neque dictum.</p>
+                <p>Quisque gravida, nisi non faucibus blandit, tellus erat consectetur mauris, non ornare lectus magna ut leo.</p>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div>
+            <figure>
+                <img src="images/project1.png" alt="project1" width="500">
+                <button class="open-window" onclick="openWindow(this)">Flashcards</button>
+            </figure>
+            <div class="window">
+                <h2>Flashcards</h2>
+                <p>You can see the project at the following link: <a href="https://github.com/r0829897/Flashcards">flashcards</a></p>
+                <p>
+                    Duis venenatis orci nibh, nec egestas felis faucibus vitae. Cras vitae mi non lectus hendrerit
+                    sagittis et a sem. Suspendisse mauris mauris, luctus quis scelerisque ac, scelerisque at elit.
+                    Integer a venenatis tellus. Maecenas eget consequat diam. Duis in dignissim neque.
+                    Fusce imperdiet mollis eros quis egestas. Suspendisse id varius neque. Fusce vestibulum quam ut
+                    sollicitudin hendrerit.
+                </p>
+                <button class="close-window" onclick="closeWindow(this)">Close</button>
+            </div>
+            <figure>
+                <img src="images/project2.png" alt="project2" width="350">
+                <button class="open-window" onclick="openWindow(this)">Virtual Piano</button>
+            </figure>
+            <div class="window">
+                <h2>Virtual Piano</h2>
+                <p>You can see the project at the following link: <a href="https://github.com/r0829897/VirtualPiano">virtual piano</a></p>
+                <p>
+                    Duis venenatis orci nibh, nec egestas felis faucibus vitae. Cras vitae mi non lectus hendrerit
+                    sagittis et a sem. Suspendisse mauris mauris, luctus quis scelerisque ac, scelerisque at elit.
+                    Integer a venenatis tellus. Maecenas eget consequat diam. Duis in dignissim neque.
+                    Fusce imperdiet mollis eros quis egestas. Suspendisse id varius neque. Fusce vestibulum quam ut
+                    sollicitudin hendrerit.
+                </p>
+                <button class="close-window" onclick="closeWindow(this)">Close</button>
+            </div>
+        </div>
+    </section>
+    <section id="contacts">
+        <h2>Contacts</h2>
+        <p>You can contact me at <a href="ben.dhover@telenet.be">ben.dhover@telenet.be</a> <br> or phone number: <a href="tel:+32123456789">+32 123 45 67 89</a></p>
+        <div>
+            <img src="images/github.svg" alt="Github" width="35">
+            <img src="images/facebook.svg" alt="Facebook" width="35">
+            <img src="images/twitter.svg" alt="Twitter" width="35">
+            <img src="images/instagram.svg" alt="Instagram" width="35">
+        </div>
+    </section>
+    <footer>
+        <p>Ben Dhover <br> 2021</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
